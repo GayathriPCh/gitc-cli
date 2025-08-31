@@ -2,6 +2,7 @@
 
 Enhanced Git CLI wrappers for productivity.
 
+Check out this medium blog for more info: https://medium.com/@p.gayathri.ch/extending-git-with-custom-cli-commands-in-python-c0314b672d9c
 ## Install
 
 For normal users (from GitHub):
@@ -44,6 +45,8 @@ pip install -e .
 ```
 
 ## Usage
+<img width="928" height="344" alt="image" src="https://github.com/user-attachments/assets/043a4e08-d010-4538-ab15-69f94008aea3" />
+
 
 ```bash
 # Find branches matching a pattern (local + remote)
@@ -62,6 +65,7 @@ gitc activity --since yesterday --branch "DEV_*"
     gitc stale 12w --delete --keep "featureX,hotfixY"
     # Force delete all other stale branches except protected + --keep
     gitc stale 12w --delete --force --keep "featureX,hotfixY"```
+```
 
 ```bash
 # Search commit messages for a keyword
@@ -72,7 +76,7 @@ gitc search "Restore Dialog"
 
 * Regex-like branch search (local + remote unified view)
 * Activity report by branch & time range
-* Detect unused/stale local branches
+* Detect unused/stale local branches and optionally keep branches while deleting remaining at once.
 * Commit message search with easy cherry-pick lookup
 
 ## Notes
@@ -82,11 +86,7 @@ gitc search "Restore Dialog"
 
 ## Troubleshooting PATH on Windows
 
-After installing, you may see this warning:
-
-```bash
-WARNING: The script gitc.exe is installed in '...Python313\Scripts' which is not on PATH.
-```
+After installing, you may get some not found errors or sort.
 
 ### Fix:
 
